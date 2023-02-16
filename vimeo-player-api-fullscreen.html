@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vimeo API requestFullscreen</title>
+</head>
+
+<body>
+
+    <h1>Vimeo API requestFullscreen</h1>
+
+    <div class="vimeo-video-container">
+        <div data-vimeo-id="796759876" data-vimeo-defer id="video_1" style="position: absolute;"></div>
+        <button>Play Video 1</button>
+    </div>
+
+    <div class="vimeo-video-container">
+        <div data-vimeo-id="59777392" data-vimeo-defer id="video_2" style="position: absolute;"></div>
+        <button>Play Video 2</button>
+    </div>
+
+    <div class="vimeo-video-container">
+        <div data-vimeo-id="19231868" data-vimeo-defer id="video_3" style="position: absolute;"></div>
+        <button>Play Video 3</button>
+    </div>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <script>
+
+        /**
+         * @link https://github.com/vimeo/player.js
+         */
+
+        const options = {
+            width: 1,
+            height: 1
+        };
+
+        const vimeoContainers = document.querySelectorAll('.vimeo-video-container');
+
+        vimeoContainers.forEach(function (el) {
+
+            el.querySelector('button').addEventListener('click', function () {
+
+                const id = el.querySelector('div').id;
+                const player = new Vimeo.Player(id, options);
+
+                player.on('play', function () {
+
+                    player.requestFullscreen().then(function () {
+                        // the player entered fullscreen
+                    })
+                });
+
+                player.on('fullscreenchange', function () {
+
+                    player.getFullscreen().then(function (fullscreen) {
+                        // fullscreen = whether fullscreen is turned on or off
+                        if (!fullscreen) {
+                            player.pause();
+                        }
+                    });
+                });
+
+                player.play();
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
