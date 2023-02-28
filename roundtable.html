@@ -6,60 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Round Table</title>
-
-    <style>
-        .has-global-padding>.alignfull:where(:not(.has-global-padding))> :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]), p, h1, h2, h3, h4, h5, h6, ul, ol) {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }
-
-        video {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .overlay-image {
-            transition: opacity 1s;
-        }
-
-        .fade-in {
-            animation: fadeIn 5s;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: .75;
-                transform: scale(.75);
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1);
-                display: block;
-            }
-        }
-
-        @media only screen and (max-width: 760px) {
-            .block-main-container {
-                width: 90vw !important;
-                height: 70vh !important;
-            }
-
-            .underlay {
-                width: calc(90vw + 1px) !important;
-                height: calc(70vh + 1px) !important;
-            }
-
-            .media-container {
-                width: 90vw !important;
-                height: 70vh !important;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -302,19 +248,13 @@
             '#ecb651'
         ];
 
-        const timeout = (index) => {
-            setTimeout(() => {
-                overlayImages[index].style.display = 'none';;
-            }, 2000);
-        };
-
         Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
             get: function () {
                 return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > this.HAVE_CURRENT_DATA);
             }
         })
 
-        mainBlockContainers.forEach(function (mainBlockContainer, index) {
+        mainBlockContainers.forEach(function (mainBlockContainer) {
 
             mainBlockContainer.addEventListener('mouseover', function (e) {
 
@@ -390,97 +330,61 @@
             });
         });
 
-
-
-
-
-
-        // overlays.forEach((container, index) => {
-        //     container.addEventListener('mouseover', (e) => {
-        //         if (e.target && e.target.attributes && e.target.attributes.key) {
-        //             const selectedPlayer = videoPlayers.filter((p) => e.target.attributes.key.value == p.attributes.key.value)[0];
-        //             if (selectedPlayer && selectedPlayer.paused) {
-        //                 selectedPlayer.load();
-        //                 selectedPlayer.play();
-        //                 overlayImages[index].style.animation = 'fadeOut 3s';
-        //                 timeout(index);
-
-        //                 const currentQuote = allQuotes.filter((q) => e.target.attributes.key.value == q.attributes.key.value)[0];
-
-        //                 currentQuote.style.display = 'flex';
-
-        //             }
-        //         }
-        //     });
-        // });
-
-
-        // underlays.forEach((container, index) => {
-        //     container.addEventListener('mouseleave', (e) => {
-        //         if (e.target && e.target.attributes && e.target.attributes.key) {
-        //             const currentQuote = allQuotes.filter((q) => e.target.attributes.key.value == q.attributes.key.value)[0];
-        //             currentQuote.style.display = 'none';
-        //             clearTimeout(timeout);
-        //             overlayImages[index].style.display = 'block';
-        //             overlayImages[index].style.animation = 'fadeInImage 3s';
-        //             const selectedPlayer = videoPlayers.filter((p) => e.target.attributes.key.value == p.attributes.key.value)[0];
-        //             if (selectedPlayer && !selectedPlayer.paused) {
-        //                 selectedPlayer.pause();
-        //                 selectedPlayer.muted = true;
-        //             }
-        //         }
-        //     });
-        // });
-
-
-        // const options = {
-        //     width: 1,
-        //     height: 1
-        // };
-
-
-        // playButtons.forEach((btn, index) => {
-        //     btn.addEventListener('click', (e) => {
-        //         if (e.target && e.target.attributes.key) {
-
-        //             const selectedPlayer = videoPlayers[index];
-        //             if (selectedPlayer && !selectedPlayer.paused) {
-        //                 selectedPlayer.pause();
-        //                 selectedPlayer.muted = true;
-        //             }
-
-        //             const id = e.target.attributes.id.value;
-        //             const player = new Vimeo.Player(id, options);
-        //             player.on('play', function () {
-        //                 player.requestFullscreen().then(function () {
-        //                 })
-        //             });
-
-        //             player.on('fullscreenchange', function () {
-        //                 player.getFullscreen().then(function (fullscreen) {
-        //                     if (!fullscreen) {
-        //                         player.pause();
-        //                     }
-        //                 });
-        //             });
-
-        //             player.play();
-
-
-
-        //         }
-        //     });
-        // });
-
-        // muteButtons.forEach((btn) => {
-        //     btn.addEventListener("click", (e) => {
-        //         if (e.target && e.target.attributes && e.target.attributes.key) {
-        //             const selectedPlayer = videoPlayers.filter((p) => e.target.attributes.key.value == p.attributes.key.value)[0];
-        //             selectedPlayer.muted = !selectedPlayer.muted;
-        //         }
-        //     });
-        // });
     </script>
+
+    <style>
+        .has-global-padding>.alignfull:where(:not(.has-global-padding))> :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]), p, h1, h2, h3, h4, h5, h6, ul, ol) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        video {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .overlay-image {
+            transition: opacity 1s;
+        }
+
+        .fade-in {
+            animation: fadeIn 5s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: .75;
+                transform: scale(.75);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 760px) {
+            .block-main-container {
+                width: 90vw !important;
+                height: 70vh !important;
+            }
+
+            .underlay {
+                width: calc(90vw + 1px) !important;
+                height: calc(70vh + 1px) !important;
+            }
+
+            .media-container {
+                width: 90vw !important;
+                height: 70vh !important;
+            }
+        }
+    </style>
 
 
 
