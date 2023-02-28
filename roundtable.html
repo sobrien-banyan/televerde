@@ -8,14 +8,38 @@
     <title>Round Table</title>
 
     <style>
+        /* custom css */
+
         .wp-block-columns {
             display: flex;
             justify-content: space-evenly;
+        }
+
+        dialog::backdrop {
+            background: rgba(238, 238, 238, .75);
         }
     </style>
 </head>
 
 <body>
+
+    <!-- begin dialog -->
+    <dialog>
+        <h1>A dialog to trigger document interaction</h1>
+        <button>Close</button>
+    </dialog>
+
+    <script>
+        const dialog = document.querySelector('dialog');
+        const dialogButton = document.querySelector('dialog button');
+        window.addEventListener('DOMContentLoaded', function () {
+            dialog.showModal();
+        });
+        dialogButton.addEventListener('click', function () {
+            dialog.close();
+        });
+    </script>
+    <!-- end dialog -->
 
     <!-- wp:columns -->
     <div class="wp-block-columns"><!-- wp:column -->
