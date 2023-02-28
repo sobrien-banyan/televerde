@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Table</title>
+
+    <style>
+        .has-global-padding>.alignfull:where(:not(.has-global-padding))> :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]), p, h1, h2, h3, h4, h5, h6, ul, ol) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        video {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .overlay-image {
+            transition: opacity 1s;
+        }
+
+        .fade-in {
+            animation: fadeIn 5s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: .75;
+                transform: scale(.75);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 760px) {
+            .block-main-container {
+                width: 90vw !important;
+                height: 70vh !important;
+            }
+
+            .underlay {
+                width: calc(90vw + 1px) !important;
+                height: calc(70vh + 1px) !important;
+            }
+
+            .media-container {
+                width: 90vw !important;
+                height: 70vh !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- wp:columns -->
+    <div class="wp-block-columns"><!-- wp:column -->
+        <div class="wp-block-column">
+            <!-- wp:customgutenbergblock/custom-gutenberg-block {"name":"Jeffrey Hillburn","description":"Somebody who says, 'I want to be buried at Angola' - that’s the saddest part of what a life sentence does to you.","imageURL":"https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/01/JeffreyHillburn_AtAngola-scaled.jpg","imageID":"","vimeoVideoId":"796759876","videoURL":"https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/01/JeffreyHillburn_AtAngola.mp4","videoID":""} -->
+            <div class="wp-block-customgutenbergblock-custom-gutenberg-block underlay"
+                style="width:calc(30vw + 1px);height:calc(35vh + 1px);display:flex;justify-content:center;align-items:center;margin-bottom:25px">
+                <div class="block-main-container" style="width:30vw;height:35vh">
+                    <div class="media-container"
+                        style="position:relative;width:30vw;height:35vh;overflow:hidden;text-align:center;display:flex;align-items:center;justify-content:center">
+                        <div
+                            style="position:absolute;right:10px;top:10px;z-index:10;background-color:black;border-radius:50%;width:44px;height:44px;display:flex;justify-content:center;align-items:center;border:1px solid #FFFFFF">
+                            <svg width="24px" height="22px" viewBox="0 0 24 22">
+                                <g id="Typography---UI-Comp" stroke="none" stroke-width="1" fill="none"
+                                    fill-rule="evenodd" stroke-linejoin="round" transform="translate(1, 1)">
+                                    <rect id="Rectangle" stroke="none" fill="none" stroke-linejoin="round"
+                                        x="-0.222222222" y="-0.5" width="22" height="21"></rect>
+                                    <path
+                                        d="M13.5,2.34442061 L7.5,5.80914658 L7.5,14.2843614 L13.5,17.8531694 L13.5,2.34442061 Z"
+                                        id="Path-2" stroke="#FFFFFF" fill="#FFFFFF" stroke-linejoin="round"></path>
+                                    <path
+                                        d="M5.3611511,6.5 L1.5,6.5 L1.5,13.4949457 L5.3611511,13.4949457 L5.3611511,6.5 Z"
+                                        id="Path-2" stroke="#FFFFFF" fill="#FFFFFF" stroke-linejoin="round"></path>
+                                    <line x1="16.0730595" y1="8.09611093" x2="20.029715" y2="12.0350478" id="Line-10"
+                                        stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></line>
+                                    <line x1="16.0730595" y1="8.09611093" x2="20.029715" y2="12.0350478" id="Line-10"
+                                        stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
+                                        transform="translate(18.051387, 10.065579) rotate(-89.871422) translate(-18.051387, -10.065579) ">
+                                    </line>
+                                </g>
+                            </svg>
+                            <div class="mute-button"
+                                style="z-index:11;border-radius:50%;width:44px;height:44px;cursor:pointer;position:absolute">
+                            </div>
+                        </div><video class="video-player"
+                            src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/01/JeffreyHillburn_AtAngola.mp4"
+                            type="video/mp4" preload="auto" muted></video><img class="overlay-image"
+                            src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/01/JeffreyHillburn_AtAngola-scaled.jpg"
+                            style="object-fit:cover;height:100%;width:100%;position:absolute;top:0;bottom:0;display:block" />
+                        <div class="quote-box"
+                            style="display:none;left:50%;transform:translate(-50%, 0);position:absolute;bottom:80px;width:100%">
+                            <italics class="fade-in"
+                                style="text-align:center;position:relative;color:white;padding:0 30px;font-family:EB Garamond, serif;font-weight:300">
+                                "Somebody who says, 'I want to be buried at Angola' - that’s the saddest part of what a
+                                life sentence does
+                                to you."</italics>
+                        </div>
+                        <div class="overlay-rt" style="height:100%;width:100%;position:absolute;top:0;bottom:0"></div>
+                        <div style="bottom:20px;position:absolute;display:flex;left:50%;transform:translate(-50%, 0);height:40px;padding:0 20px;justify-content:center;align-items:center"
+                            class="video-control-container"><svg width="24px" height="24px"
+                                style="pointer-events: all;">
+                                <circle cx="12" cy="12" stroke="black" fill="none" r="10" stroke-width="1"
+                                    style="opacity: 0.9; transition: opacity 0.4s ease 0s;"></circle>
+                                <polygon stroke-linejoin="round" fill-rule="evenodd" points="16 12 9 16 9 8"
+                                    style="transform: none; opacity: 0.9; transition: opacity 0.4s ease 0s; cursor: pointer;">
+                                </polygon>
+                            </svg>
+                            <p
+                                style="font-size:20px;color:black;font-family:EB Garamond, serif;font-weight:300;margin-left:12px">
+                                Jeffrey Hillburn</p>
+                            <div class="play-button"
+                                style="position:absolute;width:100%;height:100%;z-index:11;cursor:pointer"
+                                data-vimeo-id="796759876" data-vimeo-defer="true" id="796759876"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /wp:customgutenbergblock/custom-gutenberg-block -->
+        </div>
+        <!-- /wp:column -->
+
+        <!-- wp:column -->
+        <div class="wp-block-column">
+            <!-- wp:customgutenbergblock/custom-gutenberg-block {"name":"Jerome Derricks","description":"I started tutoring guys, older guys that couldn’t even write their names, you know? And I started feeling a self worth.","imageURL":"https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/02/Jerome_Derricks-scaled.jpg","imageID":"","vimeoVideoId":"59777392","videoURL":"https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/02/Jerome_Derricks.mp4","videoID":""} -->
+            <div class="wp-block-customgutenbergblock-custom-gutenberg-block underlay"
+                style="width:calc(30vw + 1px);height:calc(35vh + 1px);display:flex;justify-content:center;align-items:center;margin-bottom:25px">
+                <div class="block-main-container" style="width:30vw;height:35vh">
+                    <div class="media-container"
+                        style="position:relative;width:30vw;height:35vh;overflow:hidden;text-align:center;display:flex;align-items:center;justify-content:center">
+                        <div
+                            style="position:absolute;right:10px;top:10px;z-index:10;background-color:black;border-radius:50%;width:44px;height:44px;display:flex;justify-content:center;align-items:center;border:1px solid #FFFFFF">
+                            <svg width="24px" height="22px" viewBox="0 0 24 22">
+                                <g id="Typography---UI-Comp" stroke="none" stroke-width="1" fill="none"
+                                    fill-rule="evenodd" stroke-linejoin="round" transform="translate(1, 1)">
+                                    <rect id="Rectangle" stroke="none" fill="none" stroke-linejoin="round"
+                                        x="-0.222222222" y="-0.5" width="22" height="21"></rect>
+                                    <path
+                                        d="M13.5,2.34442061 L7.5,5.80914658 L7.5,14.2843614 L13.5,17.8531694 L13.5,2.34442061 Z"
+                                        id="Path-2" stroke="#FFFFFF" fill="#FFFFFF" stroke-linejoin="round"></path>
+                                    <path
+                                        d="M5.3611511,6.5 L1.5,6.5 L1.5,13.4949457 L5.3611511,13.4949457 L5.3611511,6.5 Z"
+                                        id="Path-2" stroke="#FFFFFF" fill="#FFFFFF" stroke-linejoin="round"></path>
+                                    <line x1="16.0730595" y1="8.09611093" x2="20.029715" y2="12.0350478" id="Line-10"
+                                        stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></line>
+                                    <line x1="16.0730595" y1="8.09611093" x2="20.029715" y2="12.0350478" id="Line-10"
+                                        stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
+                                        transform="translate(18.051387, 10.065579) rotate(-89.871422) translate(-18.051387, -10.065579) ">
+                                    </line>
+                                </g>
+                            </svg>
+                            <div class="mute-button"
+                                style="z-index:11;border-radius:50%;width:44px;height:44px;cursor:pointer;position:absolute">
+                            </div>
+                        </div><video class="video-player"
+                            src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/02/Jerome_Derricks.mp4"
+                            type="video/mp4" preload="auto" muted></video><img class="overlay-image"
+                            src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/02/Jerome_Derricks-scaled.jpg"
+                            style="object-fit:cover;height:100%;width:100%;position:absolute;top:0;bottom:0;display:block" />
+                        <div class="quote-box"
+                            style="display:none;left:50%;transform:translate(-50%, 0);position:absolute;bottom:80px;width:100%">
+                            <italics class="fade-in"
+                                style="text-align:center;position:relative;color:white;padding:0 30px;font-family:EB Garamond, serif;font-weight:300">
+                                "I started tutoring guys, older guys that couldn’t even write their names, you know? And
+                                I started feeling
+                                a self worth."</italics>
+                        </div>
+                        <div class="overlay-rt" style="height:100%;width:100%;position:absolute;top:0;bottom:0"></div>
+                        <div style="bottom:20px;position:absolute;display:flex;left:50%;transform:translate(-50%, 0);height:40px;padding:0 20px;justify-content:center;align-items:center"
+                            class="video-control-container"><svg width="24px" height="24px"
+                                style="pointer-events: all;">
+                                <circle cx="12" cy="12" stroke="black" fill="none" r="10" stroke-width="1"
+                                    style="opacity: 0.9; transition: opacity 0.4s ease 0s;"></circle>
+                                <polygon stroke-linejoin="round" fill-rule="evenodd" points="16 12 9 16 9 8"
+                                    style="transform: none; opacity: 0.9; transition: opacity 0.4s ease 0s; cursor: pointer;">
+                                </polygon>
+                            </svg>
+                            <p
+                                style="font-size:20px;color:black;font-family:EB Garamond, serif;font-weight:300;margin-left:12px">
+                                Jerome
+                                Derricks</p>
+                            <div class="play-button"
+                                style="position:absolute;width:100%;height:100%;z-index:11;cursor:pointer"
+                                data-vimeo-id="59777392" data-vimeo-defer="true" id="59777392"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /wp:customgutenbergblock/custom-gutenberg-block -->
+        </div>
+        <!-- /wp:column -->
+
+        <!-- wp:column -->
+        <div class="wp-block-column">
+            <!-- wp:customgutenbergblock/custom-gutenberg-block {"name":"Jarrod Lanclow","description":"Everything that I miss now and that I want, everything I could possibly dream of having, I already had it. Just being able to be home to spend time with my family... Just to be home.","imageURL":"https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/02/Jarrod_Lanclow-scaled.jpg","imageID":"","vimeoVideoId":"19231868","videoURL":"https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/02/Jarrod_Lanclow.mp4","videoID":""} -->
+            <div class="wp-block-customgutenbergblock-custom-gutenberg-block underlay"
+                style="width:calc(30vw + 1px);height:calc(35vh + 1px);display:flex;justify-content:center;align-items:center;margin-bottom:25px">
+                <div class="block-main-container" style="width:30vw;height:35vh">
+                    <div class="media-container"
+                        style="position:relative;width:30vw;height:35vh;overflow:hidden;text-align:center;display:flex;align-items:center;justify-content:center">
+                        <div
+                            style="position:absolute;right:10px;top:10px;z-index:10;background-color:black;border-radius:50%;width:44px;height:44px;display:flex;justify-content:center;align-items:center;border:1px solid #FFFFFF">
+                            <svg width="24px" height="22px" viewBox="0 0 24 22">
+                                <g id="Typography---UI-Comp" stroke="none" stroke-width="1" fill="none"
+                                    fill-rule="evenodd" stroke-linejoin="round" transform="translate(1, 1)">
+                                    <rect id="Rectangle" stroke="none" fill="none" stroke-linejoin="round"
+                                        x="-0.222222222" y="-0.5" width="22" height="21"></rect>
+                                    <path
+                                        d="M13.5,2.34442061 L7.5,5.80914658 L7.5,14.2843614 L13.5,17.8531694 L13.5,2.34442061 Z"
+                                        id="Path-2" stroke="#FFFFFF" fill="#FFFFFF" stroke-linejoin="round"></path>
+                                    <path
+                                        d="M5.3611511,6.5 L1.5,6.5 L1.5,13.4949457 L5.3611511,13.4949457 L5.3611511,6.5 Z"
+                                        id="Path-2" stroke="#FFFFFF" fill="#FFFFFF" stroke-linejoin="round"></path>
+                                    <line x1="16.0730595" y1="8.09611093" x2="20.029715" y2="12.0350478" id="Line-10"
+                                        stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></line>
+                                    <line x1="16.0730595" y1="8.09611093" x2="20.029715" y2="12.0350478" id="Line-10"
+                                        stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
+                                        transform="translate(18.051387, 10.065579) rotate(-89.871422) translate(-18.051387, -10.065579) ">
+                                    </line>
+                                </g>
+                            </svg>
+                            <div class="mute-button"
+                                style="z-index:11;border-radius:50%;width:44px;height:44px;cursor:pointer;position:absolute">
+                            </div>
+                        </div>
+
+                        <video class="video-player"
+                            src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/02/Jarrod_Lanclow.mp4"
+                            type="video/mp4" preload="auto" muted></video><img class="overlay-image"
+                            src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/02/Jarrod_Lanclow-scaled.jpg"
+                            style="object-fit:cover;height:100%;width:100%;position:absolute;top:0;bottom:0;display:block" />
+
+
+                        <div class="quote-box"
+                            style="display:none;left:50%;transform:translate(-50%, 0);position:absolute;bottom:80px;width:100%">
+                            <italics class="fade-in"
+                                style="text-align:center;position:relative;color:white;padding:0 30px;font-family:EB Garamond, serif;font-weight:300">
+                                "Everything that I miss now and that I want, everything I could possibly dream of
+                                having, I already had
+                                it. Just being able to be home to spend time with my family... Just to be home."
+                            </italics>
+                        </div>
+                        <div class="overlay-rt" style="height:100%;width:100%;position:absolute;top:0;bottom:0"></div>
+                        <div style="bottom:20px;position:absolute;display:flex;left:50%;transform:translate(-50%, 0);height:40px;padding:0 20px;justify-content:center;align-items:center"
+                            class="video-control-container"><svg width="24px" height="24px"
+                                style="pointer-events: all;">
+                                <circle cx="12" cy="12" stroke="black" fill="none" r="10" stroke-width="1"
+                                    style="opacity: 0.9; transition: opacity 0.4s ease 0s;"></circle>
+                                <polygon stroke-linejoin="round" fill-rule="evenodd" points="16 12 9 16 9 8"
+                                    style="transform: none; opacity: 0.9; transition: opacity 0.4s ease 0s; cursor: pointer;">
+                                </polygon>
+                            </svg>
+                            <p
+                                style="font-size:20px;color:black;font-family:EB Garamond, serif;font-weight:300;margin-left:12px">
+                                Jarrod
+                                Lanclow</p>
+                            <div class="play-button"
+                                style="position:absolute;width:100%;height:100%;z-index:11;cursor:pointer"
+                                data-vimeo-id="19231868" data-vimeo-defer="true" id="19231868"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /wp:customgutenbergblock/custom-gutenberg-block -->
+        </div>
+        <!-- /wp:column -->
+    </div>
+    <!-- /wp:columns -->
+
+    <!-- wp:html -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script>
+        const videoPlayers = Array.from(document.getElementsByClassName('video-player'));
+        const playButtons = Array.from(document.getElementsByClassName('play-button'));
+        const videoControlContainers = Array.from(document.getElementsByClassName('video-control-container'));
+        const muteButtons = Array.from(document.getElementsByClassName('mute-button'));
+        const mainBlockContainers = Array.from(document.getElementsByClassName('block-main-container'));
+        const overlayImages = Array.from(document.getElementsByClassName('overlay-image'));
+
+        const colorList = [
+            '#8b91cc',
+            '#eae796',
+            '#b6cbaf',
+            '#d29786',
+            '#ac4f30',
+            '#7b8d59',
+            '#38768d',
+            '#ecb651'
+        ];
+
+        const timeout = (index) => {
+            setTimeout(() => {
+                overlayImages[index].style.display = 'none';;
+            }, 2000);
+        };
+
+        Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+            get: function () {
+                return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > this.HAVE_CURRENT_DATA);
+            }
+        })
+
+        mainBlockContainers.forEach(function (mainBlockContainer, index) {
+
+            mainBlockContainer.addEventListener('mouseover', function (e) {
+
+                if (e.target.className == 'overlay-rt') {
+
+                    const selectedPlayer = this.querySelector('video');
+                    const overlayImage = this.querySelector('.overlay-image');
+                    const quote = this.querySelector('.quote-box');
+
+                    if (selectedPlayer.playing)
+                        return;
+
+                    videoPlayers.forEach(function (videoPlayer) {
+                        videoPlayer.pause();
+                        videoPlayer.currentTime = 0;
+                    });
+
+                    selectedPlayer.addEventListener('playing', function () {
+                        selectedPlayer.muted = false;
+                        overlayImage.style.opacity = 0;
+                        quote.style.display = 'flex';
+                    });
+
+                    selectedPlayer.play();
+                }
+            });
+
+            mainBlockContainer.addEventListener('mouseleave', function () {
+
+                const overlayImage = this.querySelector('.overlay-image');
+                const quote = this.querySelector('.quote-box');
+
+                videoPlayers.forEach(function (videoPlayer) {
+                    videoPlayer.pause();
+                    videoPlayer.currentTime = 0;
+                });
+
+                overlayImage.style.opacity = 1;
+                quote.style.display = 'none';
+            });
+
+
+            const videoControlContainer = mainBlockContainer.querySelector('.video-control-container');
+            videoControlContainer.style.background = colorList[Math.floor(Math.random() * 8)];
+            videoControlContainer.addEventListener('click', function () {
+                const VimeoOptions = {
+                    width: 1,
+                    height: 1
+                };
+                const vimeoId = this.querySelector('.play-button').dataset.vimeoId;
+                const vimeoPlayer = new Vimeo.Player(vimeoId, VimeoOptions);
+
+                vimeoPlayer.on('play', function () {
+
+                    videoPlayers.forEach(function (videoPlayer) {
+                        videoPlayer.pause();
+                        videoPlayer.setCurrentTime = 0;
+                    });
+
+                    vimeoPlayer.requestFullscreen();
+                });
+
+                vimeoPlayer.on('fullscreenchange', function () {
+                    vimeoPlayer.getFullscreen().then(function (fullscreen) {
+                        if (!fullscreen) {
+                            vimeoPlayer.pause();
+                            vimeoPlayer.setCurrentTime(0);
+                        }
+                    });
+                });
+
+                vimeoPlayer.play();
+            });
+        });
+
+
+
+
+
+
+        // overlays.forEach((container, index) => {
+        //     container.addEventListener('mouseover', (e) => {
+        //         if (e.target && e.target.attributes && e.target.attributes.key) {
+        //             const selectedPlayer = videoPlayers.filter((p) => e.target.attributes.key.value == p.attributes.key.value)[0];
+        //             if (selectedPlayer && selectedPlayer.paused) {
+        //                 selectedPlayer.load();
+        //                 selectedPlayer.play();
+        //                 overlayImages[index].style.animation = 'fadeOut 3s';
+        //                 timeout(index);
+
+        //                 const currentQuote = allQuotes.filter((q) => e.target.attributes.key.value == q.attributes.key.value)[0];
+
+        //                 currentQuote.style.display = 'flex';
+
+        //             }
+        //         }
+        //     });
+        // });
+
+
+        // underlays.forEach((container, index) => {
+        //     container.addEventListener('mouseleave', (e) => {
+        //         if (e.target && e.target.attributes && e.target.attributes.key) {
+        //             const currentQuote = allQuotes.filter((q) => e.target.attributes.key.value == q.attributes.key.value)[0];
+        //             currentQuote.style.display = 'none';
+        //             clearTimeout(timeout);
+        //             overlayImages[index].style.display = 'block';
+        //             overlayImages[index].style.animation = 'fadeInImage 3s';
+        //             const selectedPlayer = videoPlayers.filter((p) => e.target.attributes.key.value == p.attributes.key.value)[0];
+        //             if (selectedPlayer && !selectedPlayer.paused) {
+        //                 selectedPlayer.pause();
+        //                 selectedPlayer.muted = true;
+        //             }
+        //         }
+        //     });
+        // });
+
+
+        // const options = {
+        //     width: 1,
+        //     height: 1
+        // };
+
+
+        // playButtons.forEach((btn, index) => {
+        //     btn.addEventListener('click', (e) => {
+        //         if (e.target && e.target.attributes.key) {
+
+        //             const selectedPlayer = videoPlayers[index];
+        //             if (selectedPlayer && !selectedPlayer.paused) {
+        //                 selectedPlayer.pause();
+        //                 selectedPlayer.muted = true;
+        //             }
+
+        //             const id = e.target.attributes.id.value;
+        //             const player = new Vimeo.Player(id, options);
+        //             player.on('play', function () {
+        //                 player.requestFullscreen().then(function () {
+        //                 })
+        //             });
+
+        //             player.on('fullscreenchange', function () {
+        //                 player.getFullscreen().then(function (fullscreen) {
+        //                     if (!fullscreen) {
+        //                         player.pause();
+        //                     }
+        //                 });
+        //             });
+
+        //             player.play();
+
+
+
+        //         }
+        //     });
+        // });
+
+        // muteButtons.forEach((btn) => {
+        //     btn.addEventListener("click", (e) => {
+        //         if (e.target && e.target.attributes && e.target.attributes.key) {
+        //             const selectedPlayer = videoPlayers.filter((p) => e.target.attributes.key.value == p.attributes.key.value)[0];
+        //             selectedPlayer.muted = !selectedPlayer.muted;
+        //         }
+        //     });
+        // });
+    </script>
+
+
+
+    <!-- /wp:html -->
+
+</body>
+
+</html>
