@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="22px"
+    viewBox="0 0 24 22" style="opacity: 0.8; transition: opacity 0.4s ease 0s;">
+    <g id="Typography---UI-Comp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round"
+        transform="translate(1, 1)">
+        <rect id="Rectangle" stroke="none" fill="none" stroke-linejoin="round" x="-0.222222222" y="-0.5" width="22"
+            height="21"></rect>
+        <path d="M13.5,2.34442061 L7.5,5.80914658 L7.5,14.2843614 L13.5,17.8531694 L13.5,2.34442061 Z" id="Path-2"
+            stroke="#FFFFFF" fill="#FFFFFF" stroke-linejoin="round"></path>
+        <path d="M5.3611511,6.5 L1.5,6.5 L1.5,13.4949457 L5.3611511,13.4949457 L5.3611511,6.5 Z" id="Path-2"
+            stroke="#FFFFFF" fill="#FFFFFF" stroke-linejoin="round"></path>
+        <line x1="16.0730595" y1="8.09611093" x2="20.029715" y2="12.0350478" id="Line-10" stroke="#FFFFFF"
+            stroke-width="2" stroke-linecap="round"></line>
+        <line x1="16.0730595" y1="8.09611093" x2="20.029715" y2="12.0350478" id="Line-10" stroke="#FFFFFF"
+            stroke-width="2" stroke-linecap="round"
+            transform="translate(18.051387, 10.065579) rotate(-89.871422) translate(-18.051387, -10.065579) "></line>
+    </g>
+</svg>
