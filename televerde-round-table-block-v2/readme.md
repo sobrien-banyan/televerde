@@ -11,7 +11,7 @@ This Gutenberg Block will allow a user to upload or select a video from wordpres
 ## Getting Started
 
 * Please be aware that in order the for full functionality of the videos to work, an HTML widget needs to be applied to the bottom of the page you will be using this gutenberg block in.
-* The code from custom_js_copy.js in the src folder should be copied and pasted in the HTML widget and saved.s
+* The code from html-block.html in the src folder should be copied and pasted in the HTML widget and saved.s
 
 ### Dependencies
 
@@ -21,7 +21,7 @@ This Gutenberg Block will allow a user to upload or select a video from wordpres
 
 * Place a copy of this repository into your sites wp-content/plugins folder.
 * Add an HTML widget to the page you will be embedding the videos in.
-* Locate the file named custom_js_copy.js and copy the entire source code.
+* Locate the file named src/html-block.html and copy the entire source code.
 * Paste the copied code into the HTML widget and save.
 * Reload the page and everything should run optimally.
 
