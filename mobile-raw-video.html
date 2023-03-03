@@ -6,6 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Optimized</title>
+
+    <style>
+        .videos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: 992px) {
+            .videos {
+                flex-direction: row;
+            }
+        }
+
+        section.round-table.video {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+        section.round-table.video video {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,61 +40,61 @@
         <section class="round-table video"><video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana-1280x720-1.webp"
-                type="video/mp4" preload="metadata" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline controls></video>
         </section>
 
         <section class="round-table video"><video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Perryville_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Perryville-1280x720-1.webp"
-                type="video/mp4" preload="metadata" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline controls></video>
         </section>
 
         <section class="round-table video"><video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Briana_H_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Briana_H-1280x720-1.webp"
-                type="video/mp4" preload="metadata" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline controls></video>
         </section>
 
         <section class="round-table video"><video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Danielle_C_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Danielle_C-1280x720-1.webp"
-                type="video/mp4" preload="metadata" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline controls></video>
         </section>
 
         <section class="round-table video"><video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Dominique_P_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Dominique_P-1280x720-1.webp"
-                type="video/mp4" preload="metadata" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline controls></video>
         </section>
 
         <section class="round-table video"><video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jaclyn_E_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jaclyn_E-1280x720-1.webp"
-                type="video/mp4" preload="metadata" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline controls></video>
         </section>
 
         <section class="round-table video"><video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jada_V_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jada_V-1280x720-1.webp"
-                type="video/mp4" preload="metadata" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline controls></video>
         </section>
 
         <section class="round-table video"><video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Kimberly_M_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Kimberly_M-1280x720-1.webp"
-                type="video/mp4" preload="metadata" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline controls></video>
         </section>
 
         <section class="round-table video"><video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Marla_D_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Marla_D-1280x720-1.webp"
-                type="video/mp4" preload="metadata" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline controls></video>
         </section>
 
         <section class="round-table video"><video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Melissa_S_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Melissa_S-1280x720-1.webp"
-                type="video/mp4" preload="metadata" muted playsinline controls>
+                type="video/mp4" preload="none" muted playsinline controls>
 
                 HELLO
             </video>
@@ -103,7 +128,10 @@
     </script>
     <!-- end dialog -->
 
-    
+
+
+
+
 
 </body>
 
