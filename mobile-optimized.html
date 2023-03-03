@@ -12,9 +12,6 @@
 
     <div class="videos">
 
-
-
-
         <section class="round-table video"><video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana-1280x720-1.webp"
@@ -241,6 +238,132 @@
 
 
     </div>
+
+    <!-- begin dialog -->
+    <dialog>
+        <h2 class="block-heading">
+            Welcome to The Televerde Virtual Roundtable
+        </h2>
+        <h3 class="font-primary leading-tight font-bold">
+            We invite you to watch this series of first-person digital video narratives by the women who partner with
+            us.
+        </h3>
+        <button class="btn primary">
+            Select a Story to Begin
+        </button>
+    </dialog>
+
+    <script>
+        const dialog = document.querySelector('dialog');
+        const dialogButton = document.querySelector('dialog button');
+        window.addEventListener('DOMContentLoaded', function () {
+            dialog.showModal();
+        });
+        dialogButton.addEventListener('click', function () {
+            dialog.close();
+        });
+    </script>
+    <!-- end dialog -->
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <script>
+
+        Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+            get: function () {
+                return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > this.HAVE_CURRENT_DATA);
+            }
+        });
+
+        const videoWrapper = document.querySelectorAll('.video');
+        const videoPlayers = document.querySelectorAll('video');
+
+
+
+        function stopAllVideos() {
+            videoPlayers.forEach(function (videoPlayer) {
+                videoPlayer.pause();
+                videoPlayer.currentTime = 0;
+            });
+        }
+
+        videoWrapper.forEach(function (video, i) {
+
+            video.addEventListener('mouseover', function (e) {
+
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+
+                const selectedPlayer = this.querySelector('video');
+                const overlayImage = this.querySelector('img');
+                const quote = this.querySelector('blockquote p');
+
+                if (selectedPlayer.playing)
+                    return;
+
+                stopAllVideos();
+
+                selectedPlayer.addEventListener('playing', function () {
+                    selectedPlayer.muted = false;
+                    overlayImage.style.opacity = 0;
+                    quote.style.opacity = 1;
+                });
+
+                selectedPlayer.play();
+            });
+
+            video.addEventListener('mouseleave', function () {
+                const overlayImage = this.querySelector('img');
+                const quote = this.querySelector('blockquote p');
+                overlayImage.style.opacity = 1;
+                quote.style.opacity = 0;
+
+                stopAllVideos();
+            });
+
+            const colorList = [
+                '#8b91cc',
+                '#eae796',
+                '#b6cbaf',
+                '#d29786',
+                '#ac4f30',
+                '#7b8d59',
+                '#38768d',
+                '#ecb651'
+            ];
+
+            const playFullscreenButton = video.querySelector('[role="button"] a');
+            playFullscreenButton.style.backgroundColor = (i < colorList.length) ? colorList[i] : colorList[Math.floor(Math.random() * colorList.length)];
+            playFullscreenButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                stopAllVideos();
+
+                const vimeoId = this.querySelector('[data-vimeo-id]').dataset.vimeoId;
+                const vimeoPlayer = new Vimeo.Player(vimeoId, { width: 1, height: 1 });
+
+                vimeoPlayer.on('play', function () {
+                    stopAllVideos();
+                    vimeoPlayer.requestFullscreen();
+                });
+
+                vimeoPlayer.on('playing', function () {
+                    stopAllVideos();
+                });
+
+                vimeoPlayer.on('fullscreenchange', function () {
+                    vimeoPlayer.getFullscreen().then(function (fullscreen) {
+                        if (!fullscreen) {
+                            vimeoPlayer.pause();
+                            vimeoPlayer.setCurrentTime(0);
+                        }
+                    });
+                });
+
+                vimeoPlayer.play();
+            });
+        });
+    </script>
 
 
     <style>
