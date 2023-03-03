@@ -37,66 +37,82 @@
 
     <div class="videos">
 
-        <section class="round-table video"><video
-                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana_Intro_Clip-1280x720-1.mp4"
+        <section class="round-table video">
+            <video src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana-1280x720-1.webp"
-                type="video/mp4" preload="none" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
         </section>
 
-        <section class="round-table video"><video
+        <section class="round-table video">
+            <video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Perryville_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Perryville-1280x720-1.webp"
-                type="video/mp4" preload="none" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
         </section>
 
-        <section class="round-table video"><video
+        <section class="round-table video">
+            <video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Briana_H_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Briana_H-1280x720-1.webp"
-                type="video/mp4" preload="none" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
         </section>
 
-        <section class="round-table video"><video
+        <section class="round-table video">
+            <video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Danielle_C_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Danielle_C-1280x720-1.webp"
-                type="video/mp4" preload="none" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
         </section>
 
-        <section class="round-table video"><video
+        <section class="round-table video">
+            <video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Dominique_P_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Dominique_P-1280x720-1.webp"
-                type="video/mp4" preload="none" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
         </section>
 
-        <section class="round-table video"><video
+        <section class="round-table video">
+            <video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jaclyn_E_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jaclyn_E-1280x720-1.webp"
-                type="video/mp4" preload="none" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
         </section>
 
-        <section class="round-table video"><video
+        <section class="round-table video">
+            <video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jada_V_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jada_V-1280x720-1.webp"
-                type="video/mp4" preload="none" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
         </section>
 
-        <section class="round-table video"><video
+        <section class="round-table video">
+            <video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Kimberly_M_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Kimberly_M-1280x720-1.webp"
-                type="video/mp4" preload="none" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
         </section>
 
-        <section class="round-table video"><video
+        <section class="round-table video">
+            <video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Marla_D_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Marla_D-1280x720-1.webp"
-                type="video/mp4" preload="none" muted playsinline controls></video>
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
         </section>
 
-        <section class="round-table video"><video
+        <section class="round-table video">
+            <video
                 src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Melissa_S_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Melissa_S-1280x720-1.webp"
-                type="video/mp4" preload="none" muted playsinline controls>
-
-                HELLO
+                type="video/mp4" preload="none" muted playsinline>
             </video>
         </section>
 
@@ -127,6 +143,46 @@
         });
     </script>
     <!-- end dialog -->
+
+    <script>
+
+        Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+            get: function () {
+                return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > this.HAVE_CURRENT_DATA);
+            }
+        });
+
+        const videoWrapper = document.querySelectorAll('.video');
+        const videoPlayers = document.querySelectorAll('video');
+
+        function stopAllVideos() {
+            videoPlayers.forEach(function (videoPlayer) {
+                videoPlayer.pause();
+                videoPlayer.muted = true;
+                videoPlayer.currentTime = 0;
+            });
+        }
+
+        videoWrapper.forEach(function (video, i) {
+
+            video.addEventListener('mouseover', function (e) {
+
+                const selectedPlayer = this.querySelector('video');
+
+                if (selectedPlayer.playing)
+                    return;
+
+                stopAllVideos();
+
+                selectedPlayer.addEventListener('playing', function () {
+                    selectedPlayer.muted = false;
+                });
+
+                selectedPlayer.play();
+            });
+        });
+
+    </script>
 
 
 
