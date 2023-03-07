@@ -147,49 +147,68 @@
 
     <script>
 
-        Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
-            get: function () {
-                return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > this.HAVE_CURRENT_DATA);
-            }
-        });
+        document.addEventListener("DOMContentLoaded", function () {
 
-        const videoWrapper = document.querySelectorAll('.video');
-        const videoPlayers = document.querySelectorAll('video');
-
-        function stopAllVideos() {
-            videoPlayers.forEach(function (videoPlayer) {
-                videoPlayer.pause();
-                videoPlayer.muted = true;
-                videoPlayer.currentTime = 0;
+            Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+                get: function () {
+                    return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > this.HAVE_CURRENT_DATA);
+                }
             });
-        }
 
-        videoWrapper.forEach(function (video, i) {
+            const isMobile = window.matchMedia('only screen and (max-width: 768px)').matches;
+            const videoWrapper = document.querySelectorAll('.video');
+            const videoPlayers = document.querySelectorAll('video');
 
-            video.addEventListener('mouseover', function (e) {
-
-                const selectedPlayer = this.querySelector('video');
-
-                if (selectedPlayer.playing)
-                    return;
-
-                stopAllVideos();
-
-                selectedPlayer.addEventListener('playing', function () {
-                    selectedPlayer.muted = false;
+            function stopAllVideos() {
+                videoPlayers.forEach(function (videoPlayer) {
+                    videoPlayer.pause();
+                    videoPlayer.muted = true;
+                    videoPlayer.currentTime = 0;
                 });
+            }
 
-                selectedPlayer.play();
+            if (isMobile) {
+                videoPlayers.forEach(function (videoPlayer) {
+                    videoPlayer.setAttribute('controls', 'controls');
+
+                    videoPlayer.addEventListener('playing', function () {
+                        videoPlayer.muted = false;
+                        videoPlayer.requestFullscreen();
+                    });
+                });
+            }
+
+            videoWrapper.forEach(function (video, i) {
+
+                video.addEventListener('mouseover', function (e) {
+
+                    const selectedPlayer = this.querySelector('video');
+
+                    if (selectedPlayer.playing)
+                        return;
+
+                    stopAllVideos();
+
+                    selectedPlayer.addEventListener('playing', function () {
+                        selectedPlayer.muted = false;
+                    });
+
+                    selectedPlayer.play();
+                });
+            });
+
+            window.addEventListener('blur', function (e) {
+                stopAllVideos();
+            });
+
+            document.addEventListener('blur', function (e) {
+                stopAllVideos();
             });
         });
 
-        window.addEventListener('blur', function (e) {
-            stopAllVideos();
-        });
 
-        document.addEventListener('blur', function (e) {
-            stopAllVideos();
-        });
+
+
 
     </script>
 

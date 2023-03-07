@@ -136,6 +136,7 @@
 
         function stopAllVideos() {
             videoPlayers.forEach(function (videoPlayer) {
+                videoPlayer.muted = true;
                 videoPlayer.pause();
                 videoPlayer.currentTime = 0;
             });
@@ -203,6 +204,10 @@
 
                 vimeoPlayer.on('playing', function () {
                     stopAllVideos();
+                    // remove all <video>
+                    videoWrapper.forEach(function (video) {
+                        video.style.display = 'none';
+                    });
                 });
 
                 vimeoPlayer.on('fullscreenchange', function () {
@@ -216,6 +221,14 @@
 
                 vimeoPlayer.play();
             });
+        });
+
+        window.addEventListener('blur', function (e) {
+            stopAllVideos();
+        });
+
+        document.addEventListener('blur', function (e) {
+            stopAllVideos();
         });
     </script>
 
