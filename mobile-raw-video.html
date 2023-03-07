@@ -38,7 +38,8 @@
     <div class="videos">
 
         <section class="round-table video">
-            <video src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana_Intro_Clip-1280x720-1.mp4"
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana_Intro_Clip-1280x720-1.mp4"
                 poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana-1280x720-1.webp"
                 type="video/mp4" preload="none" muted playsinline>
             </video>
@@ -180,6 +181,14 @@
 
                 selectedPlayer.play();
             });
+        });
+
+        window.addEventListener('blur', function (e) {
+            stopAllVideos();
+        });
+
+        document.addEventListener('blur', function (e) {
+            stopAllVideos();
         });
 
     </script>
