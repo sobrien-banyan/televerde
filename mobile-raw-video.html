@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Optimized</title>
+
+    <style>
+        .videos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: 992px) {
+            .videos {
+                flex-direction: row;
+            }
+        }
+
+        section.round-table.video {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+        section.round-table.video video {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="videos">
+
+        <section class="round-table video">
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana_Intro_Clip-1280x720-1.mp4"
+                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana-1280x720-1.webp"
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
+        </section>
+
+        <section class="round-table video">
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Perryville_Intro_Clip-1280x720-1.mp4"
+                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Perryville-1280x720-1.webp"
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
+        </section>
+
+        <section class="round-table video">
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Briana_H_Intro_Clip-1280x720-1.mp4"
+                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Briana_H-1280x720-1.webp"
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
+        </section>
+
+        <section class="round-table video">
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Danielle_C_Intro_Clip-1280x720-1.mp4"
+                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Danielle_C-1280x720-1.webp"
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
+        </section>
+
+        <section class="round-table video">
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Dominique_P_Intro_Clip-1280x720-1.mp4"
+                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Dominique_P-1280x720-1.webp"
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
+        </section>
+
+        <section class="round-table video">
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jaclyn_E_Intro_Clip-1280x720-1.mp4"
+                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jaclyn_E-1280x720-1.webp"
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
+        </section>
+
+        <section class="round-table video">
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jada_V_Intro_Clip-1280x720-1.mp4"
+                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Jada_V-1280x720-1.webp"
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
+        </section>
+
+        <section class="round-table video">
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Kimberly_M_Intro_Clip-1280x720-1.mp4"
+                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Kimberly_M-1280x720-1.webp"
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
+        </section>
+
+        <section class="round-table video">
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Marla_D_Intro_Clip-1280x720-1.mp4"
+                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Marla_D-1280x720-1.webp"
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
+        </section>
+
+        <section class="round-table video">
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Melissa_S_Intro_Clip-1280x720-1.mp4"
+                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Melissa_S-1280x720-1.webp"
+                type="video/mp4" preload="none" muted playsinline>
+            </video>
+        </section>
+
+    </div>
+
+    <!-- begin dialog -->
+    <dialog>
+        <h2 class="block-heading">
+            Welcome to The Televerde Virtual Roundtable
+        </h2>
+        <h3 class="font-primary leading-tight font-bold">
+            We invite you to watch this series of first-person digital video narratives by the women who partner with
+            us.
+        </h3>
+        <button class="btn primary">
+            Select a Story to Begin
+        </button>
+    </dialog>
+
+    <script>
+        const dialog = document.querySelector('dialog');
+        const dialogButton = document.querySelector('dialog button');
+        window.addEventListener('DOMContentLoaded', function () {
+            dialog.showModal();
+        });
+        dialogButton.addEventListener('click', function () {
+            dialog.close();
+        });
+    </script>
+    <!-- end dialog -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+                get: function () {
+                    return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > this.HAVE_CURRENT_DATA);
+                }
+            });
+
+            const isMobile = window.matchMedia('only screen and (max-width: 768px)').matches;
+            const videoWrapper = document.querySelectorAll('.video');
+            const videoPlayers = document.querySelectorAll('video');
+
+            function stopAllVideos() {
+                videoPlayers.forEach(function (videoPlayer) {
+                    videoPlayer.pause();
+                    videoPlayer.muted = true;
+                    videoPlayer.currentTime = 0;
+                });
+            }
+
+            if (isMobile) {
+                videoPlayers.forEach(function (videoPlayer) {
+                    videoPlayer.setAttribute('controls', 'controls');
+
+                    videoPlayer.addEventListener('playing', function () {
+                        videoPlayer.muted = false;
+                        videoPlayer.requestFullscreen();
+                    });
+                });
+            }
+
+            videoWrapper.forEach(function (video, i) {
+
+                video.addEventListener('mouseover', function (e) {
+
+                    const selectedPlayer = this.querySelector('video');
+
+                    if (selectedPlayer.playing)
+                        return;
+
+                    stopAllVideos();
+
+                    selectedPlayer.addEventListener('playing', function () {
+                        selectedPlayer.muted = false;
+                    });
+
+                    selectedPlayer.play();
+                });
+            });
+
+            window.addEventListener('blur', function (e) {
+                stopAllVideos();
+            });
+
+            document.addEventListener('blur', function (e) {
+                stopAllVideos();
+            });
+        });
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

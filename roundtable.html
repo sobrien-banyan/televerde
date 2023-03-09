@@ -13,25 +13,28 @@
     <div class="videos">
 
         <section class="round-table video">
-            <video src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/01/JeffreyHillburn_AtAngola.mp4"
-                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/01/JeffreyHillburn_AtAngola-scaled.jpg"
+            <video
+                src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana_Intro_Clip-1280x720-1.mp4"
+                poster="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana-1280x720-1.webp"
                 type="video/mp4" preload="auto" muted></video>
 
-            <img src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/01/JeffreyHillburn_AtAngola-scaled.jpg"
+            <img src="https://dev-televerde.pantheonsite.io/wp-content/uploads/2023/03/Amanda_D_Indiana-1280x720-1.webp"
                 alt="">
 
             <blockquote>
                 <p>
-                    Somebody who says, 'I want to be buried at Angola' - that’s the saddest part of what a life sentence
-                    does to you.
+                    Both my parents were addicts. My mom was in Rockville prison. My dad was deep into his addiction and
+                    allowed me to quit school in fifth grade. I was basically out there with no guidance at all. I had
+                    to fend for myself to eat. I turned to using and selling drugs as a child just to make my way in
+                    life.
                 </p>
             </blockquote>
 
             <div class="play-fullscreen" role="button">
                 <a href="#">
                     <img src="play.svg" alt="">
-                    Jeffrey Hillburn
-                    <div data-vimeo-id="796759876" data-vimeo-defer="true" id="796759876"></div>
+                    Amanda D.
+                    <div data-vimeo-id="796735419" data-vimeo-defer="true" id="796735419"></div>
                 </a>
             </div>
 
@@ -92,11 +95,16 @@
 
     <!-- begin dialog -->
     <dialog>
-        <h1 class="block-heading">Welcome to Televerde’s Round Table</h1>
-        <h2 class="heading text-xl desktop:text-3xl font-primary leading-tight font-extrabold">
-            Please select whose story you would like to hear by clicking on their video.
+        <h2 class="block-heading">
+            Welcome to The Televerde Virtual Roundtable
         </h2>
-        <button class="btn primary">Close</button>
+        <h3 class="font-primary leading-tight font-bold">
+            We invite you to watch this series of first-person digital video narratives by the women who partner with
+            us.
+        </h3>
+        <button class="btn primary">
+            Select a Story to Begin
+        </button>
     </dialog>
 
     <script>
@@ -128,6 +136,7 @@
 
         function stopAllVideos() {
             videoPlayers.forEach(function (videoPlayer) {
+                videoPlayer.muted = true;
                 videoPlayer.pause();
                 videoPlayer.currentTime = 0;
             });
@@ -135,7 +144,12 @@
 
         videoWrapper.forEach(function (video, i) {
 
-            video.addEventListener('mouseover', function () {
+            video.addEventListener('mouseover', function (e) {
+
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+
                 const selectedPlayer = this.querySelector('video');
                 const overlayImage = this.querySelector('img');
                 const quote = this.querySelector('blockquote p');
@@ -179,7 +193,7 @@
             playFullscreenButton.addEventListener('click', function (e) {
                 e.preventDefault();
                 stopAllVideos();
-                
+
                 const vimeoId = this.querySelector('[data-vimeo-id]').dataset.vimeoId;
                 const vimeoPlayer = new Vimeo.Player(vimeoId, { width: 1, height: 1 });
 
@@ -190,6 +204,10 @@
 
                 vimeoPlayer.on('playing', function () {
                     stopAllVideos();
+                    // remove all <video>
+                    videoWrapper.forEach(function (video) {
+                        video.style.display = 'none';
+                    });
                 });
 
                 vimeoPlayer.on('fullscreenchange', function () {
@@ -203,6 +221,14 @@
 
                 vimeoPlayer.play();
             });
+        });
+
+        window.addEventListener('blur', function (e) {
+            stopAllVideos();
+        });
+
+        document.addEventListener('blur', function (e) {
+            stopAllVideos();
         });
     </script>
 
@@ -279,13 +305,21 @@
         section.round-table.video blockquote p {
             padding: 0 !important;
             margin: 0 !important;
-            padding-inline: 2rem;
-            line-height: 1.5rem;
-            font-size: 1.2rem;
+            padding-inline: 1rem !important;
+            line-height: 1rem !important;
+            font-size: .6rem;
             color: #ffffff !important;
 
             opacity: 0;
             transition: opacity 2s;
+        }
+
+        @media screen and (min-width: 992px) {
+            section.round-table.video blockquote p {
+                font-size: 1rem;
+                padding-inline: 2rem !important;
+                line-height: 1.5rem !important;
+            }
         }
 
         section.round-table.video .play-fullscreen {
@@ -331,18 +365,36 @@
             }
         }
 
-        dialog h1,
-        dialog h2 {
+        dialog h2,
+        dialog h3 {
             display: block;
             margin-block-start: 0 !important;
             color: #ffffff !important;
         }
 
+        dialog h2 {
+            font-size: 1.7rem;
+        }
+
+        @media screen and (min-width: 992px) {
+            dialog h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        dialog h3 {
+            font-size: 1rem;
+        }
+
+        @media screen and (min-width: 992px) {
+            dialog h3 {
+                font-size: 2rem;
+            }
+        }
+
         dialog::backdrop {
             background: rgba(19, 18, 18, 0.75);
         }
-
-
 
         /* overrides existing televerde.com css */
         .wp-block-columns {
